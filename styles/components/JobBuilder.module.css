@@ -1,19 +1,19 @@
 @value vars: "../vars.css";
 @value spacingXL, spacingL, boxShadow, borderRadius from vars;
 
-.OrderBuilder {
+.JobBuilder {
   position: absolute;
   left: spacingXL;
   top: spacingXL;
   min-width: 30rem;
 
   padding: spacingL;
-  
+
   box-shadow: boxShadow;
   border-radius: borderRadius;
 }
 
-.OrderBuilder > * + *{
+.JobBuilder > * + * {
   margin-top: spacingL;
 }
 

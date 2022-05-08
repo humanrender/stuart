@@ -102,7 +102,7 @@ export const AddressInput = ({
             }
           })
           .catch((error) => {
-            console.log(error);
+            console.error(error);
             update({ ...DEFAULT_COORDINATES }, error.toString());
           });
       };

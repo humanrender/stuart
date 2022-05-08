@@ -1,5 +1,5 @@
 @value vars: "../vars.css";
-@value highlight, borderRadiusS, fontFamily, textSize, white from vars;
+@value highlight, borderRadiusS, fontFamily, textSize, white, fontBlack from vars;
 
 .SubmitButton {
   display: block;
@@ -8,15 +8,16 @@
 .SubmitButton button {
   display: block;
   width: 100%;
-  background: #10A2EA;
-  background: linear-gradient(0deg, #10A2EA 0%, #0F99E8 100%);
+  background: #10a2ea;
+  background: linear-gradient(0deg, #10a2ea 0%, #0f99e8 100%);
   border-radius: borderRadiusS;
   border: none;
   font-family: fontFamily;
   font-size: textSize;
+  font-weight: fontBlack;
   color: white;
   height: 4rem;
-  box-shadow: 0 1px 2px 0 rgba(16, 162, 234, 0.30);
+  box-shadow: 0 1px 2px 0 rgba(16, 162, 234, 0.3);
 }
 
 .SubmitButton button:disabled {

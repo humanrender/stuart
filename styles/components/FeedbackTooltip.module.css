@@ -1,0 +1,15 @@
+@value vars: "../vars.css";
+@value spacing, spacingXL, borderRadiusS, textSize, fontFamily, boxShadow, white from vars;
+
+.FeedbackTooltip {
+  position: absolute;
+  left: spacingXL;
+  bottom: spacingXL;
+  font-family: fontFamily;
+  font-size: textSize;
+  background-color: rgba(41, 41, 41, 0.9);
+  box-shadow: boxShadow;
+  color: white;
+  padding: 12px spacing;
+  border-radius: borderRadiusS;
+}
