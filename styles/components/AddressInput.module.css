@@ -1,0 +1,33 @@
+@value vars: "../vars.css";
+@value spacing, spacingXL, borderRadiusS, dark, darker, darkest, textSize, fontFamily from vars;
+
+.AddressInput {
+  display: flex;
+  gap: spacing;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  width: spacingXL;
+  height: spacingXL;
+}
+
+.input {
+  border-radius: borderRadiusS;
+  background-color: dark;
+  font-family: fontFamily;
+  font-size: textSize;
+  color: darkest;
+  border: none;
+  padding: 0 spacing;
+  flex: 1;
+}
+
+.input::placeholder {
+  color: darker;
+}
+
+.input:focus-visible {
+  outline: 1px solid darker;
+}

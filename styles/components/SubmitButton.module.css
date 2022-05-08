@@ -1,0 +1,24 @@
+@value vars: "../vars.css";
+@value highlight, borderRadiusS, fontFamily, textSize, white from vars;
+
+.SubmitButton {
+  display: block;
+}
+
+.SubmitButton button {
+  display: block;
+  width: 100%;
+  background: #10A2EA;
+  background: linear-gradient(0deg, #10A2EA 0%, #0F99E8 100%);
+  border-radius: borderRadiusS;
+  border: none;
+  font-family: fontFamily;
+  font-size: textSize;
+  color: white;
+  height: 4rem;
+  box-shadow: 0 1px 2px 0 rgba(16, 162, 234, 0.30);
+}
+
+.SubmitButton button:disabled {
+  opacity: 0.5;
+}

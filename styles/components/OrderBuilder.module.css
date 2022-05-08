@@ -1,0 +1,22 @@
+@value vars: "../vars.css";
+@value spacingXL, spacingL, boxShadow, borderRadius from vars;
+
+.OrderBuilder {
+  position: absolute;
+  left: spacingXL;
+  top: spacingXL;
+  min-width: 30rem;
+
+  padding: spacingL;
+  
+  box-shadow: boxShadow;
+  border-radius: borderRadius;
+}
+
+.OrderBuilder > * + *{
+  margin-top: spacingL;
+}
+
+.submit {
+  margin-left: 4rem;
+}
