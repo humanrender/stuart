@@ -1,7 +1,8 @@
 @value vars: "../vars.css";
-@value spacingXL, spacingL, boxShadow, borderRadius from vars;
+@value spacingXL, spacingL, boxShadow, borderRadius, white from vars;
 
 .JobBuilder {
+  background-color: white;
   position: absolute;
   left: spacingXL;
   top: spacingXL;

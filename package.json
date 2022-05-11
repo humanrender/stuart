@@ -11,6 +11,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.10.2",
     "@react-hook/debounce": "^4.0.0",
     "next": "12.1.6",
     "react": "18.1.0",

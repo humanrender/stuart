@@ -20,6 +20,8 @@ export interface Job {
 export interface JobBuilderProperties {
   onJobCreated: (job: Job) => void;
   onError: (error: string) => void;
+  onPickup: (coordinates: GeocodeCoordinates) => void;
+  onDropoff: (coordinates: GeocodeCoordinates) => void;
 }
 
 const DEFAULT_JOB = { pickup: "", dropoff: "" };
@@ -33,7 +35,12 @@ const ERROR_MESSAGES = {
   [RESPONSE_CODES.FATAL]: "Something went wrong, try again later.",
 };
 
-export const JobBuilder = ({ onJobCreated, onError }: JobBuilderProperties) => {
+export const JobBuilder = ({
+  onJobCreated,
+  onError,
+  onPickup,
+  onDropoff,
+}: JobBuilderProperties) => {
   const [pickup, setPickup] = useState("");
   const [dropoff, setDropoff] = useState("");
   const update = (newJob: Job, error?: string) => {
@@ -86,6 +93,7 @@ export const JobBuilder = ({ onJobCreated, onError }: JobBuilderProperties) => {
         placeholder="Pick up address"
         onChange={(coordinates: GeocodeCoordinates) => {
           setPickup(coordinates.address);
+          onPickup(coordinates);
         }}
       />
       <AddressInput
@@ -93,6 +101,7 @@ export const JobBuilder = ({ onJobCreated, onError }: JobBuilderProperties) => {
         placeholder="Drop off address"
         onChange={(coordinates: GeocodeCoordinates) => {
           setDropoff(coordinates.address);
+          onDropoff(coordinates);
         }}
       />
       <SubmitButton
